@@ -1,20 +1,28 @@
 {
-  "name": "im-demo2",
+  "name": "im-demo3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "init": "npm install --registry http://npm.job.qinqinxiaobao.com && npx browserslist@latest --update-db && npm run init-submodule",
+    "update-sdk": "npm install uniplat-sdk@latest --registry http://npm.job.qinqinxiaobao.com --save",
+    "init-submodule": "git submodule init && git submodule update && cd src/customer-service && git checkout master && git pull && npm install --registry http://npm.job.qinqinxiaobao.com"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "element-ui": "^2.15.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "register-service-worker": "^1.7.2",
+    "uniplat-sdk": "^0.1.320-private",
     "vue": "^2.6.14",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
@@ -26,12 +34,50 @@
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "compression-webpack-plugin": "^9.2.0",
     "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5",
     "vue-template-compiler": "^2.6.14"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "ignorePatterns": [
+      "node_modules",
+      "customer-service"
+    ],
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard",
+      "@vue/typescript/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "indent": "off",
+      "quotes": "off",
+      "comma-dangle": "off",
+      "space-before-function-paren": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/camelcase": "off",
+      "no-useless-constructor": "off",
+      "@typescript-eslint/no-namespace": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
