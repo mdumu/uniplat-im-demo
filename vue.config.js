@@ -5,11 +5,11 @@ const pro = process.env.NODE_ENV === 'production'
 
 module.exports = defineConfig({
     transpileDependencies: true,
-    chainWebpack: (config) => {
-        config.plugin('ignoreMoment').use(webpack.ContextReplacementPlugin, [/moment[/\\]locale$/, /zh-cn/])
+    // chainWebpack: (config) => {
+    //     config.plugin('ignoreMoment').use(webpack.ContextReplacementPlugin, [/moment[/\\]locale$/, /zh-cn/])
 
-        config.plugin('lodash').use(webpack.ProvidePlugin, [{ _: 'lodash' }])
-    },
+    //     config.plugin('lodash').use(webpack.ProvidePlugin, [{ _: 'lodash' }])
+    // },
     configureWebpack: (config) => {
         // 配置别名等放到这里
 

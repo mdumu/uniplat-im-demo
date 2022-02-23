@@ -11,6 +11,7 @@
     "init-submodule": "git submodule init && git submodule update && cd src/customer-service && git checkout master && git pull && npm install --registry http://npm.job.qinqinxiaobao.com"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "core-js": "^3.8.3",
     "element-ui": "^2.15.7",
     "lodash": "^4.17.21",
@@ -25,6 +26,7 @@
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.178",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -42,6 +44,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5",
@@ -72,7 +76,13 @@
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/camelcase": "off",
       "no-useless-constructor": "off",
-      "@typescript-eslint/no-namespace": "off"
+      "@typescript-eslint/no-namespace": "off",
+      "camelcase": [
+        0,
+        {
+          "properties": "never"
+        }
+      ]
     }
   },
   "browserslist": [

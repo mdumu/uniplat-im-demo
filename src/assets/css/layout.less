@@ -1,0 +1,315 @@
+@import 'variables.less';
+
+// 此部分 layout 大多是参考 bootstrap 的全局样式设计
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+@root-font-family: 'PingFangSC-Regular', 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+body {
+    margin: 0;
+    font-family: @root-font-family;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    background-color: #fff;
+    line-height: 1 !important;
+}
+
+.font-family-medium {
+    font-family: @root-weight-family;
+    font-weight: 600;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+[tabindex='-1']:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+textarea,
+input[type='text'],
+input[type='number'] {
+    font-family: @root-font-family;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+a {
+    color: @primary-a-color;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: @primary-a-hover;
+    text-decoration: underline;
+}
+
+a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-75 {
+    height: 75%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-wrap {
+    white-space: normal;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-clickable {
+    cursor: pointer;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.required {
+    position: relative;
+    padding-left: 10px;
+
+    &.no-offset {
+        padding-left: 0;
+
+        &:before {
+            left: -10px;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: '*';
+        left: 0;
+        top: 0;
+        color: @text-danger;
+    }
+
+    &.center {
+        &:before {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+[type='number'],
+[type='number'],
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+[type='search'] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+span:focus,
+div:focus {
+    outline: none;
+}
+
+.main-content-router-view {
+    width: calc(100% - @left-menu-width);
+}
+
+.hyper-link {
+    text-decoration: underline;
+    color: @text-danger-2;
+    cursor: pointer;
+}
