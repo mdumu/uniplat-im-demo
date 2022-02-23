@@ -1,0 +1,3 @@
+[submodule "src/customer-service"]
+	path = src/customer-service
+	url = git@gitlab.corp.qinqinxiaobao.com:uniplat/customer-service.git
