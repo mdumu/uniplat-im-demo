@@ -12,6 +12,7 @@
             :size="600"
         >
             <div class="chat" v-loading="!chatTitle">
+                <!-- @/customer-service 中的组件 -->
                 <chat-room />
             </div>
         </el-drawer>
@@ -46,11 +47,14 @@
         }
 
         private init() {
+            // 登录统一认证中心passport
             return getPassportTokenByPassport(config.testAccount, config.testPassword)
                 .then((token) => {
+                    // 使用passport Token初始化sdk
                     return sdk.setup(token)
                 })
                 .then(() => {
+                    // sdk初始化完后，chat使用全局sdk实例去初始化会话链接以及会话列表
                     return initChat()
                 })
         }

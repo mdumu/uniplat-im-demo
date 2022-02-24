@@ -1,0 +1,62 @@
+{
+    "cSpell.userWords": [], // only use words from .cspell.json
+    "cSpell.enabled": true,
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vetur.format.options.tabSize": 4,
+    "files.exclude": {
+        "node_modules": false
+    },
+    "prettier.semi": false,
+    "prettier.printWidth": 100,
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.styleInitialIndent": true,
+    "vetur.format.defaultFormatterOptions": {
+        "prettyhtml": {
+            "printWidth": 500,
+        },
+        "prettier": {
+            "semi": false,
+            "singleQuote": false,
+            "printWidth": 100,
+        }
+    },
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "[javascript][typescript]": {
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "cSpell.words": [
+        "bjrsy",
+        "caiji",
+        "desheng",
+        "ifdef",
+        "mescroll",
+        "tecsun",
+        "uview",
+        "vuex",
+        "WEIXIN",
+        "xchat",
+        "xxcj"
+    ],
+    "[env]": {
+        "editor.defaultFormatter": "IronGeek.vscode-env"
+    }
+}
