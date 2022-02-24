@@ -1,4 +1,4 @@
-# im-demo2
+# im-demo
 
 ### src/customer-service
 
