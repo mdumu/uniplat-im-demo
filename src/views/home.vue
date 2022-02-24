@@ -1,8 +1,10 @@
 <template>
     <div>
         <div v-for="item in chatList" :key="item.id" @click="openChat(item)">
-            <div>{{ item.title }}</div>
-            <div>{{ (item.last_msg_ts * 1000) | time2Relative }}</div>
+            <el-button>
+                <div>{{ item.title }}</div>
+                <div>{{ (item.last_msg_ts * 1000) | time2Relative }}</div>
+            </el-button>
         </div>
 
         <el-drawer

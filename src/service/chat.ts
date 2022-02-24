@@ -13,7 +13,7 @@ export function initChat() {
         sdk: () => sdk.core,
         orgId: () => sdk.orgId,
         connection: config.uniplatSocketUrl,
-        serviceType: ServiceType.Frontend,
+        serviceType: ServiceType.Backend,
     }).then(() => {
         console.log('初始化chat✅  开始获取和监听消息列表')
         return initChatMsg()

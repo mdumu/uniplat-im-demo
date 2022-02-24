@@ -5,7 +5,7 @@ export const config = {
     clientId: 'daai_bijie_wechat_mini_app',
     uniplatSocketUrl: 'ws://channel.jinsehuaqin.com:8080/ws',
     clientSecret: '123456',
-    testAccount: '18040417207',
-    testPassword: 'y1234567',
-    rootEntrance: '大爱毕节小程序',
+    testAccount: process.env.VUE_APP_TEST_ACCOUNT,
+    testPassword: process.env.VUE_APP_TEST_PASSWORD,
+    rootEntrance: process.env.VUE_APP_ROOT_ENTRANCE,
 }
