@@ -23,7 +23,7 @@ npm run build
 ### Lints and fixes files
 
 ```
-yarn lint
+npm run lint
 ```
 
 ### src/customer-service
